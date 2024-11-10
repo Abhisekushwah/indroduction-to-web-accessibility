@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Web Accessibility</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #0056b3;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            transition: background-color 0.3s, border 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ffffff33;
+            border: 1px solid #fff;
+        }
+
+        /* Main Content Styles */
+        main {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 5px solid #0056b3;
+            border-radius: 5px;
+            background-color: #f0f8ff;
+        }
+        section img {
+            max-width: 100%;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* List Styles */
+        ul, ol {
+            margin: 10px 20px;
+        }
+        ul li, ol li {
+            margin: 10px 0;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        /* Contact Form Styles */
+        form label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #0056b3;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #003d80;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Introduction to Web Accessibility</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Accessibility</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Web Accessibility</h2>
+            <p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. It covers a range of disabilities, including visual, auditory, physical, speech, cognitive, and neurological disabilities.</p>
+            <img src="images1.jpg"" alt="Illustration showing web accessibility features">
+        </section>
+
+        <!-- Guidelines Section -->
+        <section id="guidelines">
+            <h2>Accessibility Guidelines</h2>
+            <h3>Key Points</h3>
+            <ul>
+                <li>Provide alternative text for images.</li>
+                <li>Use high-contrast colors for readability.</li>
+                <li>Ensure keyboard navigation is possible.</li>
+                <li>Organize content with headings and landmarks.</li>
+            </ul>
+            <h3>Standards We Follow</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Standard</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>WCAG 2.1</td>
+                        <td>Guidelines for making web content accessible to people with disabilities.</td>
+                    </tr>
+                    <tr>
+                        <td>Section 508</td>
+                        <td>Mandates accessibility of federal websites for people with disabilities.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="POST" aria-label="Contact Form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; background-color: #333; color: #fff;">
+            
+            <!-- About Section in Footer -->
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h3>About Us</h3>
+                <p>We are dedicated to promoting accessible web experiences. Our mission is to ensure that all users, regardless of ability, can access and enjoy the web.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#about" style="color: #fff; text-decoration: none;">About Accessibility</a></li>
+                    <li><a href="#guidelines" style="color: #fff; text-decoration: none;">Guidelines</a></li>
+                    <li><a href="#contact" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+                    <li><a href="#privacy-policy" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@accessiblewebco.com" style="color: #fff;">info@accessiblewebco.com</a></p>
+                <p>Phone: <a href="tel:+1234567890" style="color: #fff;">+91  6006353034</a></p>
+                <p>Address: RV Vidyanikethan Post, 8th Mile, Mysore Rd, Mailasandra, Bengaluru, Karnataka 560059</p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div style="flex: 1; min-width: 200px; margin: 10px;">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#" style="color: #fff; text-decoration: none; margin-right: 10px;">Facebook</a>
+                    <a href="#" style="color: #fff; text-decoration: none; margin-right: 10px;">Twitter</a>
+                    <a href="#" style="color: #fff; text-decoration: none; margin-right: 10px;">LinkedIn</a>
+                    <a href="#" style="color: #fff; text-decoration: none;">Instagram</a>
+                </p>
+            </div>
+        </div>
+    
+        <!-- Copyright Notice -->
+        <div style="text-align: center; padding: 10px; background-color: #222;">
+            <p>&copy; 2024 Accessible Web Co. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
